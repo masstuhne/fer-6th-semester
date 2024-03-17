@@ -1,0 +1,88 @@
+----------------------------------------
+System requirements for running main.py
+----------------------------------------
+
+Following requirements need to be met:
+
+1. Python version
+    - version specified here: https://pypi.org/project/pycryptodome/
+
+2. Package dependencies:
+    - required packages listed here: [pycryptodome]
+
+
+----------------------------------------
+Testing main.py
+----------------------------------------
+
+The archive provides two scripts for executing the program:
+
+1. run_all.sh
+    - use this script for bulk execution of all examples (that I've written)
+
+2. run_one.sh
+    - use this script for executing an individual example
+    - formats (some wrong formatting is predicted and the program will exit with a message,
+               but please follow the given rules):_password] [website] [password]
+               ./run_one.sh get [master_password] [website]
+               ./run_one.sh remove [master_password] [website]
+
+----------------------------------------
+Features of main.py
+----------------------------------------
+
+1. Key derivation function: scrypt
+                            - requires large amounts of memory to compute the derived key used for AES encryption
+                              (in comparison to the other key derivation functions + it is the newest one from the
+                               bunch we have in pycryptodome)
+                            - needs randomly generated salt (>=16 byte) each time it is used + master password
+
+2. Block cipher: AES-128, mode of operation: GCM
+    - why GCM? --> it provides both authenticity (integrity) and confidentiality
+               --> upon encryption, using the given key, it produces a new cipher
+                   and computes an authentication tag which is used in decryption for checking the
+                   integrity of the data
+
+----------------------------------------
+How it works?
+----------------------------------------
+1. User initializes the new password database with its [master_password]
+    - randomly generated salt, nonce (IV) and tag will be stored in the database (in binary format)
+      so they can be used upon next operation to check the validity of the master password and the integrity
+      of the database itself
+
+2. User stores a [password] for a desired [website]
+    1. program extracts the salt, nonce, information part and the tag from the database file
+    2. using the salt and the [master_password], a key is derived/recreated using scrypt key
+       derivation function
+    3. the key and the nonce are then used for computing an AES cipher which decrypts the information part and
+       with the help of the tag checks the integrity of the data; the decrypted information part
+       represents the {website:password} relation
+    4. if the desired website already has a password associated with it, the current one
+       is replaced with a new one; if not, the password for a new website is stored; if the
+       password is the same as the already stored one, we don't really care because the next
+       step will look at everything we have as something new
+    5. all the data is then encrypted using the newly randomly generated salt (the same goes for nonce)
+       and a [master_password]; the tag is also produced since we are using AES-GCM
+    6. the encrypted data is then stored in a database file in our chosen format:
+       [salt][nonce][information_part][tag]
+
+ 3. The same logic for encryption/decryption goes for the use cases of GET and REMOVE
+
+----------------------------------------
+Why it works?
+----------------------------------------
+
+1. The tag verifies the integrity since it is computed depending on the file contents;
+   so if someone tampered with the database, the tag equality check will fail
+
+2. Entering the wrong master password will result in a wrong secret key that will then result
+   in a wrong cipher which will result in a failed decryption
+
+3. The secret key is different every time since it depends on the randomly generated salt
+   (no patterns to be detected in the encrypted file)
+    - this results with a differently looking file content (encrypted), every time, so an attacker
+    can not know any info about the stored websites/password, not even their length
+
+4. The only info an attacker can know is the size of the whole database (file size)
+    - [salt][nonce][information_part][tag]
