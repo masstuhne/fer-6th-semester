@@ -2,6 +2,7 @@
 
 # Run scenario: Initialize, Add, Get, Remove, Get
 
+echo
 echo "---------------------------------"
 echo
 
@@ -22,6 +23,7 @@ python3 main.py get master_password fer.hr
 
 # Run scenario: Add, Get, Update, Get
 
+echo
 echo "---------------------------------"
 echo
 
@@ -39,6 +41,7 @@ python3 main.py get master_password fer.hr
 
 # Run scenario: Add, Get, Get, Remove, Get
 
+echo
 echo "---------------------------------"
 echo
 
@@ -59,6 +62,7 @@ python3 main.py get master_password example.com
 
 # Run scenario: Get, Put, Remove --> Wrong Master Password
 
+echo
 echo "---------------------------------"
 echo
 
@@ -73,6 +77,7 @@ python3 main.py remove master_password_wrong fer.hr
 
 # Run scenario: Get
 
+echo
 echo "---------------------------------"
 echo
 
@@ -81,6 +86,7 @@ python3 main.py get master_password example.com
 
 # Run scenario: Initialize, Get
 
+echo
 echo "---------------------------------"
 echo
 
