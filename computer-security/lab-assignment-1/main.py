@@ -15,43 +15,31 @@ database_file = 'database_file.bin'
 def exit_program(message):
     sys.exit(message)
 
-
-def generate_key(master_password):
-    salt = get_random_bytes(SALT_LENGTH)
-    key = scrypt(master_password, str(salt), 16, 2 ** 14, 8, 1)
-    return key, salt
-
-
 def handle_init(master_password):
-    global database_file
-
-    # with automatically closes the file
-    # with open('database_file.bin', 'wb'):
-    #     pass
     encrypt('', master_password)
     print('Password manager initialized.')
 
 
 def handle_put(master_password, website, password):
-    global database_file
     information_bytes, success = decrypt(master_password)
 
     if success:
         new_information = ''
         password_dictionary = {}
-        information = information_bytes.decode('utf-8')
+        information = information_bytes.decode('utf-8').split("\n")
 
-        for line in information:
-            line_website, line_password = line.split(' ')
-            password_dictionary.update({line_website: line_password})
-
+        if not information[0].__eq__(''):
+            for line in information:
+                line_website, line_password = line.split(' ')
+                password_dictionary.update({line_website: line_password})
         password_dictionary.update({website: password})
+
         for key_website, value_password in password_dictionary.items():
             new_information += key_website
             new_information += ' '
-            new_information += password
+            new_information += value_password
             new_information += '\n'
-        new_information.rstrip('\n')
+        new_information = new_information.rstrip('\n')
 
         new_information_bytes = new_information.encode('utf-8')
 
@@ -68,14 +56,15 @@ def handle_get(master_password, website):
     result = ''
 
     if success:
-        information = information_bytes.decode('utf-8')
+        information = information_bytes.decode('utf-8').split("\n")
 
-        # for line in information:
-        #     print(line)
-        line_website, line_password = information.split(' ')
-        if line_website.__eq__(website):
-            found = True
-            result = line_password
+        if not information[0].__eq__(''):
+            for line in information:
+                line_website, line_password = line.split(' ')
+                if line_website.__eq__(website):
+                    found = True
+                    result = line_password
+                    break
 
         if found:
             print(f'Password for {website} is: {result}')
@@ -84,6 +73,38 @@ def handle_get(master_password, website):
     else:
         exit_program('Master password incorrect or integrity check failed.')
 
+def handle_remove(master_password, website):
+    information_bytes, success = decrypt(master_password)
+
+    if success:
+        new_information = ''
+        password_dictionary = {}
+        information = information_bytes.decode('utf-8').split("\n")
+
+        if not information[0].__eq__(''):
+            for line in information:
+                line_website, line_password = line.split(' ')
+                password_dictionary.update({line_website: line_password})
+
+        if password_dictionary.keys().__contains__(website):
+            password_dictionary.pop(website)
+
+            for key_website, value_password in password_dictionary.items():
+                new_information += key_website
+                new_information += ' '
+                new_information += value_password
+                new_information += '\n'
+            new_information = new_information.rstrip('\n')
+
+            new_information_bytes = new_information.encode('utf-8')
+
+            encrypt(new_information_bytes, master_password)
+
+            print(f'Removed password for {website}')
+        else:
+            print(f'No password found for: {website}')
+    else:
+        exit_program('Master password incorrect or integrity check failed.')
 
 def get_database_bytes():
     file_size = os.path.getsize(database_file)
@@ -93,6 +114,12 @@ def get_database_bytes():
         information = db_file.read(file_size - SALT_LENGTH - NONCE_LENGTH - TAG_LENGTH)
         tag = db_file.read(TAG_LENGTH)
     return salt, nonce, information, tag
+
+
+def generate_key(master_password):
+    salt = get_random_bytes(SALT_LENGTH)
+    key = scrypt(master_password, str(salt), 16, 2 ** 14, 8, 1)
+    return key, salt
 
 
 def encrypt(text, master_password):
@@ -143,5 +170,8 @@ if __name__ == '__main__':
         elif action.__eq__('get'):
             website = cli_input[3]
             handle_get(master_password, website)
+        elif action.__eq__('remove'):
+            website = cli_input[3]
+            handle_remove(master_password, website)
         else:
             exit_program('Action not permitted!')
