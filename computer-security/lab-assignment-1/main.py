@@ -15,6 +15,7 @@ database_file = 'database_file.bin'
 def exit_program(message):
     sys.exit(message)
 
+
 def handle_init(master_password):
     encrypt('', master_password)
     print('Password manager initialized.')
@@ -73,6 +74,7 @@ def handle_get(master_password, website):
     else:
         exit_program('Master password incorrect or integrity check failed.')
 
+
 def handle_remove(master_password, website):
     information_bytes, success = decrypt(master_password)
 
@@ -105,6 +107,7 @@ def handle_remove(master_password, website):
             print(f'No password found for: {website}')
     else:
         exit_program('Master password incorrect or integrity check failed.')
+
 
 def get_database_bytes():
     file_size = os.path.getsize(database_file)
