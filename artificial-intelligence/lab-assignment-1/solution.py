@@ -36,7 +36,7 @@ def print_result(found_solution, algorithm, num_of_visited_states, path_to_solut
         print("[STATES_VISITED]: " + str(num_of_visited_states))
         print("[PATH_LENGTH]: " + str(len(path_to_solution)))
         print("[TOTAL_COST]: " + str(total_cost))
-        print("[PATH]: " + ' => '.join(path_to_solution))
+        print("[PATH]: " + ' => '.join(path_to_solution.reverse()))
     else:
         print('[FOUND_SOLUTION]: no')
 
