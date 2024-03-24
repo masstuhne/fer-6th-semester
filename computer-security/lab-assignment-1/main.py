@@ -5,7 +5,7 @@ from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import scrypt
 from Crypto.Random import get_random_bytes
 
-SALT_LENGTH = 16
+SALT_LENGTH = 32
 NONCE_LENGTH = 16
 TAG_LENGTH = 16
 
@@ -70,7 +70,7 @@ def handle_get(master_password, website):
         if found:
             print(f'Password for {website} is: {result}')
         else:
-            print(f'No password found for: {website}')
+            exit_program('Master password incorrect or integrity check failed.')
     else:
         exit_program('Master password incorrect or integrity check failed.')
 
@@ -104,7 +104,7 @@ def handle_remove(master_password, website):
 
             print(f'Removed password for {website}')
         else:
-            print(f'No password found for: {website}')
+            exit_program('Master password incorrect or integrity check failed.')
     else:
         exit_program('Master password incorrect or integrity check failed.')
 
@@ -121,7 +121,7 @@ def get_database_bytes():
 
 def generate_key(master_password):
     salt = get_random_bytes(SALT_LENGTH)
-    key = scrypt(master_password, str(salt), 16, 2 ** 14, 8, 1)
+    key = scrypt(master_password, str(salt), 32, 2 ** 14, 8, 1)
     return key, salt
 
 
@@ -147,7 +147,7 @@ def encrypt(text, master_password):
 def decrypt(master_password):
     salt, nonce, information, tag = get_database_bytes()
 
-    key = scrypt(master_password, str(salt), 16, 2 ** 14, 8, 1)
+    key = scrypt(master_password, str(salt), 32, 2 ** 14, 8, 1)
     cipher = AES.new(key, AES.MODE_GCM, nonce=nonce)
 
     try:
