@@ -23,7 +23,9 @@ The archive provides two scripts for executing the program:
 2. run_one.sh
     - use this script for executing an individual example
     - formats (some wrong formatting is predicted and the program will exit with a message,
-               but please follow the given rules):_password] [website] [password]
+               but please follow the given rules):
+               ./run_one.sh init [master_password]
+               ./run_one.sh put [master_password] [website] [password]
                ./run_one.sh get [master_password] [website]
                ./run_one.sh remove [master_password] [website]
 
