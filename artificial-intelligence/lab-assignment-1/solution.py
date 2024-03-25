@@ -229,6 +229,16 @@ def run_a_star():
         print_result(False, 'A-STAR', len(closed_states), path_to_solution, total_cost)
     return
 
+def run_admissibility_check():
+    parse_input()
+    parse_input_heuristics()
+
+    is_admissible = True
+
+    
+
+    return
+
 
 # -------------------------------------------------------------------
 # init part of the program
@@ -258,3 +268,7 @@ if __name__ == '__main__':
             run_ucs()
         else:
             run_a_star()
+    elif sys.argv.__contains__('--check-optimistic'):
+        run_admissibility_check()
+    elif sys.argv.__contains__('--check-consistent'):
+        None
