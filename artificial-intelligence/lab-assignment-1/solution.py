@@ -31,12 +31,12 @@ class Node:
 
 def print_result(found_solution, algorithm, num_of_visited_states, path_to_solution, total_cost):
     if found_solution:
-        print('# ' + algorithm + ' ' + path_to_file)
+        print('# ' + algorithm + ' ' + path_to_file_heuristics)
         print('[FOUND_SOLUTION]: yes')
-        print("[STATES_VISITED]: " + str(num_of_visited_states))
-        print("[PATH_LENGTH]: " + str(len(path_to_solution)))
-        print("[TOTAL_COST]: " + str(total_cost))
-        print("[PATH]: " + ' => '.join(path_to_solution.reverse()))
+        print('[STATES_VISITED]: ' + str(num_of_visited_states))
+        print('[PATH_LENGTH]: ' + str(len(path_to_solution)))
+        print('[TOTAL_COST]: ' + str(total_cost))
+        print('[PATH]: ' + ' => '.join(path_to_solution[::-1]))
     else:
         print('[FOUND_SOLUTION]: no')
 
@@ -65,7 +65,7 @@ def parse_input():
 
 
 def parse_input_heuristics():
-    global heuristics
+    global heuristics, path_to_file_heuristics
     index_h = sys.argv.index('--h')
     path_to_file_heuristics = sys.argv[index_h + 1]
 
@@ -180,7 +180,7 @@ def run_ucs():
     return
 
 
-def run_a_star():
+def run_a_star(admissibility_check_mode: bool):
     parse_input()
     parse_input_heuristics()
     # open_states will behave like a heap queue / priority queue
@@ -192,6 +192,10 @@ def run_a_star():
     # path_to_solution will behave like a stack
     path_to_solution = []
     total_cost = 0
+
+    if admissibility_check_mode:
+        global start_state
+        start_state = admissibility_start_state
 
     heappush(open_states, Node(state_name=start_state,
                                parent=None,
@@ -224,19 +228,45 @@ def run_a_star():
                                                used_in_a_star=True))
 
     if found_solution:
+        if admissibility_check_mode:
+            return total_cost
         print_result(True, 'A-STAR', len(closed_states), path_to_solution, total_cost)
     else:
+        if admissibility_check_mode:
+            return -1
         print_result(False, 'A-STAR', len(closed_states), path_to_solution, total_cost)
     return
 
 def run_admissibility_check():
+    global admissibility_start_state
     parse_input()
     parse_input_heuristics()
 
     is_admissible = True
 
-    
+    print('# HEURISTIC-OPTIMISTIC ' + path_to_file_heuristics)
 
+    for state_name, heuristic_value in heuristics.items():
+        admissibility_start_state = state_name
+        total_cost = run_a_star(admissibility_check_mode=True)
+
+        success = ''
+        if heuristic_value <= total_cost:
+            success = 'OK'
+        else:
+            success = 'ERR'
+            is_admissible = False
+
+        print('[CONDITION]: ' +
+              '[' + success + '] ' +
+              'h(' + state_name + ') ' +
+              '<= h*: ' + '{:.1f}'.format(heuristic_value) +
+              ' <= ' + '{:.1f}'.format(total_cost))
+
+    if is_admissible:
+        print('[CONCLUSION]: Heuristic is optimistic.')
+    else:
+        print('[CONCLUSION]: Heuristic is not optimistic.')
     return
 
 
@@ -247,10 +277,12 @@ algorithm_in_use = ''
 
 index_ss = sys.argv.index('--ss')
 path_to_file = sys.argv[index_ss + 1]
+path_to_file_heuristics = ''
 
 input_lines = open(path_to_file, 'r', encoding='utf-8').readlines()
 
 start_state = ''
+admissibility_start_state = ''
 goal_states = []
 transitions = {}
 heuristics = {}
@@ -267,7 +299,7 @@ if __name__ == '__main__':
         elif algorithm_in_use == 'ucs':
             run_ucs()
         else:
-            run_a_star()
+            run_a_star(admissibility_check_mode=False)
     elif sys.argv.__contains__('--check-optimistic'):
         run_admissibility_check()
     elif sys.argv.__contains__('--check-consistent'):
