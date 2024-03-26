@@ -271,6 +271,42 @@ def run_admissibility_check():
     return
 
 
+def run_consistency_check():
+    parse_input()
+    parse_input_heuristics()
+
+    is_consistent = True
+
+    print('# HEURISTIC-CONSISTENT ' + path_to_file_heuristics)
+
+    for state_name, heuristic_value in heuristics.items():
+        next_states = transitions[state_name]
+        if next_states is not None:
+            for next_state in next_states:
+                next_state_name, next_state_cost = next_state.split(',')
+                if heuristic_value <= heuristics[next_state_name] + float(next_state_cost):
+                    print("[CONDITION]: [OK] " +
+                          "h(" + state_name + ") <= " +
+                          "h(" + next_state_name + ") + c: " +
+                          str(heuristic_value) + " <= " +
+                          str(heuristics[next_state_name]) + " + " +
+                          str(float(next_state_cost)))
+                else:
+                    is_consistent = False
+                    print("[CONDITION]: [ERR] " +
+                          "h(" + state_name + ") <= " +
+                          "h(" + next_state_name + ") + c: " +
+                          str(heuristic_value) + " <= " +
+                          str(heuristics[next_state_name]) + " + " +
+                          str(float(next_state_cost)))
+
+    if is_consistent:
+        print('[CONCLUSION]: Heuristic is consistent.')
+    else:
+        print('[CONCLUSION]: Heuristic is not consistent.')
+    return
+
+
 # -------------------------------------------------------------------
 # init part of the program
 
@@ -304,7 +340,7 @@ if __name__ == '__main__':
     elif sys.argv.__contains__('--check-optimistic'):
         run_admissibility_check()
     elif sys.argv.__contains__('--check-consistent'):
-        None
+        run_consistency_check()
 
 # -------------------------------------------------------------------
 #
@@ -316,4 +352,3 @@ if __name__ == '__main__':
 # a path that is not optimal making that admissibility check non-valid.
 #
 # -------------------------------------------------------------------
-
