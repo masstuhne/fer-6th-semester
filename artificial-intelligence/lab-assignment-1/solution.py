@@ -131,7 +131,7 @@ def run_bfs():
     return
 
 
-def run_ucs():
+def run_ucs(admissibility_check_mode: bool):
     parse_input()
     # open_states will behave like a heap queue / priority queue
     open_states = []
@@ -142,6 +142,10 @@ def run_ucs():
     # path_to_solution will behave like a stack
     path_to_solution = []
     total_cost = 0
+
+    if admissibility_check_mode:
+        global start_state
+        start_state = admissibility_start_state
 
     heappush(open_states, Node(state_name=start_state,
                                parent=None,
@@ -174,13 +178,17 @@ def run_ucs():
                                                used_in_a_star=False))
 
     if found_solution:
+        if admissibility_check_mode:
+            return total_cost
         print_result(True, 'UCS', len(closed_states), path_to_solution, total_cost)
     else:
+        if admissibility_check_mode:
+            return -1
         print_result(False, 'UCS', len(closed_states), path_to_solution, total_cost)
     return
 
 
-def run_a_star(admissibility_check_mode: bool):
+def run_a_star():
     parse_input()
     parse_input_heuristics()
     # open_states will behave like a heap queue / priority queue
@@ -192,10 +200,6 @@ def run_a_star(admissibility_check_mode: bool):
     # path_to_solution will behave like a stack
     path_to_solution = []
     total_cost = 0
-
-    if admissibility_check_mode:
-        global start_state
-        start_state = admissibility_start_state
 
     heappush(open_states, Node(state_name=start_state,
                                parent=None,
@@ -228,14 +232,11 @@ def run_a_star(admissibility_check_mode: bool):
                                                used_in_a_star=True))
 
     if found_solution:
-        if admissibility_check_mode:
-            return total_cost
         print_result(True, 'A-STAR', len(closed_states), path_to_solution, total_cost)
     else:
-        if admissibility_check_mode:
-            return -1
         print_result(False, 'A-STAR', len(closed_states), path_to_solution, total_cost)
     return
+
 
 def run_admissibility_check():
     global admissibility_start_state
@@ -248,7 +249,7 @@ def run_admissibility_check():
 
     for state_name, heuristic_value in heuristics.items():
         admissibility_start_state = state_name
-        total_cost = run_a_star(admissibility_check_mode=True)
+        total_cost = run_ucs(admissibility_check_mode=True)
 
         success = ''
         if heuristic_value <= total_cost:
@@ -297,10 +298,22 @@ if __name__ == '__main__':
         if algorithm_in_use == 'bfs':
             run_bfs()
         elif algorithm_in_use == 'ucs':
-            run_ucs()
+            run_ucs(admissibility_check_mode=False)
         else:
-            run_a_star(admissibility_check_mode=False)
+            run_a_star()
     elif sys.argv.__contains__('--check-optimistic'):
         run_admissibility_check()
     elif sys.argv.__contains__('--check-consistent'):
         None
+
+# -------------------------------------------------------------------
+#
+# MEMO:
+# Why can't a-star be used in admissibility_check?
+#
+# Because a-star is only optimal if and only if the heuristic is optimistic.
+# So if it is not (which we don't know until we test it), the a-star might find
+# a path that is not optimal making that admissibility check non-valid.
+#
+# -------------------------------------------------------------------
+
