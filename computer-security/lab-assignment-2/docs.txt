@@ -1,0 +1,83 @@
+----------------------------------------
+System requirements for running:
+    database_commands.py
+    admin_console.py
+    user_login.py
+----------------------------------------
+
+Following requirements need to be met:
+
+1. Python version
+    - version specified here: https://pypi.org/project/bcrypt/
+
+2. Package dependencies:
+    - required packages listed here: [bcrypt]
+
+
+----------------------------------------
+Testing:
+    database_commands.py
+    admin_console.py
+    user_login.py
+----------------------------------------
+
+The archive provides two scripts for executing the program:
+
+1. run_all.sh
+    - use this script for bulk execution of all examples (that I've written)
+
+2. run_one.sh
+    - use this script for executing an individual example
+    - formats (some wrong formatting is predicted and the program will exit with a message,
+               but please follow the given rules):
+               ./run_one.sh database_commands.py
+               ./run_one.sh admin_console.py add [username]
+               ./run_one.sh admin_console.py passwd [username]
+               ./run_one.sh admin_console.py forcepass [username]
+               ./run_one.sh admin_console.py del [username]
+               ./run_one.sh login.py [username]
+
+----------------------------------------
+Features of:
+    database_commands.py
+    admin_console.py
+    user_login.py
+----------------------------------------
+
+1. Database: sqlite
+                - lightweight disk-based database
+                - good enough for this simple task of storing basic users
+                - comes pre-installed with Python
+
+2. Hashing function: bcrypt
+                - uses 16 byte randomly generated salt each time it is used
+                - salt is used to prevent "rainbow tables" from being more useful than they should be (in this case)
+
+3. Password limitations
+                - passwords used need to be "strong" passwords
+                    --> regex is used to deny a password if it is not "strong"
+                    --> "strong" == needs to have lowercase and uppercase characters, numbers,
+                                    special characters and a minimum length of eight characters
+
+
+----------------------------------------
+How it works?
+----------------------------------------
+
+1. Admin initializes the new user/password database
+
+2. Admin stores passwords for desired users
+
+3. Admin can change the passwords of desired users or force them to change them on the next login
+
+4. Users can log in with the correct passwords
+
+----------------------------------------
+Why it works?
+----------------------------------------
+
+1. Explained in the "Features of section"
+    --> no additional things need to be mentioned
+
+
+
