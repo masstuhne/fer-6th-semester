@@ -12,7 +12,9 @@ def exit_program(message):
 
 
 def handle_login(username):
-    password = getpass('Password: ')
+    # password = getpass('Password: ')
+    password = input("Password: \n")
+
     password_bytes = password.encode('utf-8')
 
     if database_commands.exists_user_by_username(username):
@@ -31,8 +33,10 @@ def handle_login(username):
 
 
 def handle_force_reset(username):
-    new_password = getpass("New Password: ")
-    new_password_retype = getpass("Repeat New Password: ")
+    # new_password = getpass("New Password: ")
+    new_password = input("New Password: \n")
+    # new_password_retype = getpass("Repeat New Password: ")
+    new_password_retype = input("Repeat New Password: \n")
 
     if new_password != new_password_retype:
         exit_program("Password update failed. Password mismatch.")

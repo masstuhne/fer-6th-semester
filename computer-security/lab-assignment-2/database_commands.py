@@ -76,5 +76,5 @@ def update_user_force_req(username, force_password_change_required):
 
 def delete_user(username):
     connection, cursor = open_connection()
-    cursor.execute("DELETE FROM users WHERE uuid = ?", (username, ))
+    cursor.execute("DELETE FROM users WHERE username = ?", (username, ))
     close_connection(connection, cursor)

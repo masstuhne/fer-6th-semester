@@ -13,8 +13,11 @@ def exit_program(message):
 
 
 def handle_add(username):
-    password = getpass("Password: ")
-    password_retype = getpass("Repeat Password: ")
+    # password = getpass("Password: ")
+    password = input("Password: \n")
+    # password_retype = getpass("Repeat Password: ")
+    password_retype = input("Repeat Password: \n")
+
 
     if password != password_retype:
         exit_program("User add failed. Password mismatch.")
@@ -31,8 +34,10 @@ def handle_add(username):
 
 
 def handle_update_password(username):
-    password = getpass("Password: ")
-    password_retype = getpass("Repeat Password: ")
+    # password = getpass("Password: ")
+    password = input("Password: \n")
+    # password_retype = getpass("Repeat Password: ")
+    password_retype = input("Repeat Password: \n")
 
     if password != password_retype:
         exit_program("Password update failed. Password mismatch.")
