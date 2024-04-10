@@ -24,6 +24,9 @@ class Clause:
         if self.number < other.number:
             return True
 
+    def copy(self):
+        return Clause(self.literals.copy(), self.number, self.from_1, self.from_2)
+
 
 def parse_input():
     global goal_clause_final, current_index
@@ -53,6 +56,30 @@ def parse_input():
                     starting_clauses_set.add(Clause(literals_set, current_index))
 
 
+def recalculate_for_cooking():
+    global sos_clauses, starting_clauses_set_copy, current_index
+
+    index = 1
+
+    temp_clauses_set = set()
+    for clause in starting_clauses_set_copy:
+        temp_clause = clause.copy()
+        temp_clause.number = index
+        index += 1
+        temp_clauses_set.add(temp_clause)
+    starting_clauses_set_copy = temp_clauses_set.copy()
+
+    temp_clauses_set = set()
+    for clause in sos_clauses:
+        temp_clause = clause.copy()
+        temp_clause.number = index
+        index += 1
+        temp_clauses_set.add(temp_clause)
+    sos_clauses = temp_clauses_set.copy()
+
+    current_index = index
+
+
 def cooking():
     global sos_clauses, starting_clauses_set_copy, current_index, index_after_start, negated_goal_clauses, goal_clause_final
     for index, line in enumerate(input_lines_actions):
@@ -79,10 +106,14 @@ def cooking():
                 negated_goal_clauses = get_clauses_from_negated_goal_state(goal_clause_final)
                 sos_clauses.update(negated_goal_clauses)
 
+                # recalculate_for_cooking()
                 index_after_start = current_index
+                # print(sos_clauses)
+                # print(starting_clauses_set_copy)
 
                 handle_resolution_check()
 
+                sos_clauses.clear()
                 current_index = remember_current_index
             elif line.__contains__('+'):
                 current_index += 1
@@ -107,7 +138,6 @@ def cooking():
 
                 delete_clause = Clause(literals_set, None)
                 starting_clauses_set_copy.remove(delete_clause)
-
 
 
 def negate_literal(literal):
@@ -190,7 +220,7 @@ def resolve_new_clauses(clause1, clause2):
 
 
 def handle_success_output(sos_clauses):
-    global possible_nil_clause, index_after_start
+    global possible_nil_clause, index_after_start, starting_clauses_set
 
     collected_clauses_for_output = []
     collected_parents = []
