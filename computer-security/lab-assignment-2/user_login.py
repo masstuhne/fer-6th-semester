@@ -38,10 +38,14 @@ def handle_force_reset(username):
     # new_password_retype = getpass("Repeat New Password: ")
     new_password_retype = input("Repeat New Password: \n")
 
+    current_password = database_commands.get_user_password(username)
+
     if new_password != new_password_retype:
         exit_program("Password update failed. Password mismatch.")
     else:
-        if re.search(strong_password_regex, new_password):
+        if bcrypt.checkpw(new_password.encode("utf-8"), current_password):
+            exit_program("User add failed. Password is too weak.")
+        elif re.search(strong_password_regex, new_password):
             new_password_bytes = new_password.encode("utf-8")
             new_hashed_password = bcrypt.hashpw(new_password_bytes, bcrypt.gensalt())
             database_commands.update_user_password(username, new_hashed_password)
