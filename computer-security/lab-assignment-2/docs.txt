@@ -58,6 +58,7 @@ Features of:
                     --> regex is used to deny a password if it is not "strong"
                     --> "strong" == needs to have lowercase and uppercase characters, numbers,
                                     special characters and a minimum length of eight characters
+                - new password cannot be the same as the old password
 
 
 ----------------------------------------
@@ -76,7 +77,7 @@ How it works?
 Why it works?
 ----------------------------------------
 
-1. Explained in the "Features of section"
+1. Explained in the "Features of" section
     --> no additional things need to be mentioned
 
 
