@@ -14,16 +14,17 @@ class TreeLeaf:
 
 
 class TreeNode:
-    def __init__(self, feature, subtrees, dataset):
+    def __init__(self, feature, subtrees, dataset, depth):
         self.feature = feature
         self.subtrees = subtrees
         self.dataset = dataset
+        self.depth = depth
 
     def __str__(self):
-        return f"TreeNode(feature={self.feature}, subtrees={self.subtrees})"
+        return f"TreeNode(feature={self.feature}, subtrees={self.subtrees}, depth={self.depth})"
 
     def __repr__(self):
-        return f"TreeNode(feature={repr(self.feature)}, subtrees={self.subtrees})"
+        return f"TreeNode(feature={repr(self.feature)}, subtrees={self.subtrees}, depth={self.depth})"
 
 
 def predict_for_row(node, test_row):
@@ -74,10 +75,11 @@ def calculate_entropy(data):
 
 
 def get_unique_feature_values(data, feature):
-    feature_values = set()
+    feature_values = []
     for row in data:
         temp_feature_value = row[feature]
-        feature_values.add(temp_feature_value)
+        if temp_feature_value not in feature_values:
+            feature_values.append(temp_feature_value)
     return feature_values
 
 
@@ -127,12 +129,15 @@ def calculate_most_frequent_label(data):
         else:
             dict_label_count[label_value] = 1
 
-    most_frequent_label = max(dict_label_count, key=dict_label_count.get)
+    most_frequent_label = max(sorted(dict_label_count.keys()), key=lambda x: dict_label_count[x])
     return most_frequent_label, dict_label_count[most_frequent_label]
 
 
 def handle_id3(data, data_parent, features):
-    global current_data_entropy
+    global current_data_entropy, current_depth
+    if is_limited:
+        if current_depth == limited_depth:
+            return TreeLeaf(calculate_most_frequent_label(data)[0])
     if len(data) == 0:
         value = calculate_most_frequent_label(data_parent)
         return TreeLeaf(value)
@@ -152,6 +157,7 @@ def handle_id3(data, data_parent, features):
 
     subtrees = []
     values = get_unique_feature_values(data, max_gain_feature_index)
+    current_depth += 1
     for value in values:
         new_data = []
         for row in data:
@@ -161,7 +167,8 @@ def handle_id3(data, data_parent, features):
         current_data_entropy = calculate_entropy(data)
         t = handle_id3(new_data, data, features)
         subtrees.append((value, t))
-    return TreeNode(max_gain_feature, subtrees, data)
+    current_depth -= 1
+    return TreeNode(max_gain_feature, subtrees, data, current_depth)
 
 
 def handle_prediction(start_node, test_data):
@@ -236,11 +243,15 @@ def parse_output(node, depth, prefix_print):
 
 path_to_file_learn = ""
 path_to_file_test = ""
+is_limited = False
+limited_depth: int
 
 input_data = []
 features = []
 learn_data = []
 test_data = []
+
+current_depth = 0
 
 # used for test
 real_and_predicted_labels = []
@@ -257,6 +268,10 @@ learning_dictionary = {}
 if __name__ == '__main__':
     path_to_file_learn = sys.argv[1]
     path_to_file_test = sys.argv[2]
+
+    if len(sys.argv) > 3:
+        is_limited = True
+        limited_depth = int(sys.argv[3])
 
     # parsing learning data
     input_data = parse_input(path_to_file_learn)
@@ -283,9 +298,3 @@ if __name__ == '__main__':
 
     print("[CONFUSION_MATRIX]:")
     handle_confusion_matrix(test_data)
-
-    # KAJ RADITI KOD PREDICTIONS-a
-    # gledas red po red test file-a
-    # i gledas decision_tree (pocinje sa start) koji si napravil u learn dijelu
-    # ako je npr. rainy onda slijedis tu granu
-    # onda dalje slijedis grane sve do lista pa printas label lista
