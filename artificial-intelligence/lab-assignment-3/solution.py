@@ -81,6 +81,16 @@ def get_unique_feature_values(data, feature):
     return feature_values
 
 
+def get_unique_label_values(data):
+    label_column = len(data[0]) - 1
+    label_values = []
+    for row in data:
+        temp_label_value = row[label_column]
+        if temp_label_value not in label_values:
+            label_values.append(temp_label_value)
+    return label_values
+
+
 def calculate_information_gain(data, feature, label_column):
     label_column = len(data[0]) - 1
     entropy_by_feature_value = {}
@@ -155,17 +165,45 @@ def handle_id3(data, data_parent, features):
 
 
 def handle_prediction(start_node, test_data):
+    global real_and_predicted_labels
     label_column = len(test_data[0]) - 1
     test_data_size = len(test_data)
     number_of_correct_predictions = 0
     for row in test_data:
         prediction = predict_for_row(start_node, row)
+        temp_tuple = (row[label_column], prediction)
+        real_and_predicted_labels.append(temp_tuple)
         if prediction == row[label_column]:
             number_of_correct_predictions += 1
         print(prediction, end=" ")
     print()
     prediction_accuracy = number_of_correct_predictions / test_data_size
     return prediction_accuracy
+
+
+def clear_temp_dict(temp_dict):
+    for key in temp_dict.keys():
+        temp_dict[key] = 0
+
+def handle_confusion_matrix(test_data):
+    label_values = sorted(get_unique_label_values(test_data))
+    temp_dict = {}
+    for label in label_values:
+        temp_dict[label] = 0
+
+    for label in label_values:
+        clear_temp_dict(temp_dict)
+        for label_tuple in real_and_predicted_labels:
+            if label_tuple[0] == label:
+                temp_dict[label_tuple[1]] += 1
+        temp_dict = {key: temp_dict[key] for key in sorted(temp_dict)}
+        values_list = list(temp_dict.values())
+        for i, value in enumerate(values_list):
+            if i == len(values_list) - 1:
+                print(value, end="")
+            else:
+                print(value, end=" ")
+        print()
 
 
 def parse_input(path_to_file):
@@ -204,6 +242,9 @@ features = []
 learn_data = []
 test_data = []
 
+# used for test
+real_and_predicted_labels = []
+
 # used both for learn and test
 current_data_row_number: int
 current_label_column: int
@@ -240,6 +281,8 @@ if __name__ == '__main__':
 
     print(f"[ACCURACY]: {accuracy:.5f}")
 
+    print("[CONFUSION_MATRIX]:")
+    handle_confusion_matrix(test_data)
 
     # KAJ RADITI KOD PREDICTIONS-a
     # gledas red po red test file-a
