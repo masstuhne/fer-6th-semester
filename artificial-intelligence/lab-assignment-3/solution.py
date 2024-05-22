@@ -54,7 +54,6 @@ def predict_for_row(node, test_row):
         return most_frequent_label
 
 
-
 def calculate_entropy(data):
     label_column = len(data[0]) - 1
     unique_labels = {}
@@ -191,6 +190,7 @@ def handle_prediction(start_node, test_data):
 def clear_temp_dict(temp_dict):
     for key in temp_dict.keys():
         temp_dict[key] = 0
+
 
 def handle_confusion_matrix(test_data):
     label_values = sorted(get_unique_label_values(test_data))
