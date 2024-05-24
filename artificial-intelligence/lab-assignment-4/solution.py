@@ -35,7 +35,7 @@ class NeuralNetwork:
         for i in range(len(data)):
             curr_row = data[i]
             y = float(curr_row[-1])
-            x = np.asarray(curr_row[:-1], dtype=np.float64).reshape(1, -1)
+            x = np.asarray(curr_row[:-1], dtype=np.float64).reshape(-1, 1)
             # x = x.reshape(1, -1)
 
             curr_layer = 0
@@ -204,4 +204,4 @@ if __name__ == '__main__':
 
     best_neural_network = run_genetic_algorithm(population, iterations)
     best_neural_network.compute_mean_squared_error(test_data)
-    print(f'[Train error]: {best_neural_network.mean_squared_error:.6f}')
+    print(f'[Test error]: {best_neural_network.mean_squared_error:.6f}')
