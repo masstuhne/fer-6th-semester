@@ -36,18 +36,11 @@ class NeuralNetwork:
             curr_row = data[i]
             y = float(curr_row[-1])
             x = np.asarray(curr_row[:-1], dtype=np.float64).reshape(-1, 1)
-            # x = x.reshape(1, -1)
 
             curr_layer = 0
             for weight in self.weights:
-                # print("W: ", weight)
-                # print("X: ", x)
-                # print(x.shape)
                 matrix_multiple = np.dot(weight, x)
-                # print("Matrix multiplication: ", matrix_multiple)
-                # print("BIAS: ", self.biases[curr_layer])
                 result = np.add(matrix_multiple, self.biases[curr_layer])
-                # print("R: ", result)
                 curr_layer += 1
 
                 if curr_layer < (self.num_of_layers - 1):
@@ -83,9 +76,9 @@ def parse_input(path_to_file):
     return return_data
 
 
-def generate_start_population(pop_size, nn_architecture):
+def generate_start_population(population_size, nn_architecture):
     population = []
-    for i in range(pop_size):
+    for i in range(population_size):
         population.append(NeuralNetwork(nn_architecture))
     return population
 
@@ -111,13 +104,13 @@ def handle_crossover(parent1, parent2):
 def handle_mutate(neural_network):
     for weight in neural_network.weights:
         given_random = np.random.random()
-        if given_random < p:
-            weight += np.random.normal(loc=0, scale=K, size=weight.shape)
+        if given_random < mutation_probability:
+            weight += np.random.normal(loc=0, scale=standard_deviation_k, size=weight.shape)
 
     for bias in neural_network.biases:
         given_random = np.random.random()
-        if given_random < p:
-            bias += np.random.normal(loc=0, scale=K, size=bias.shape)
+        if given_random < mutation_probability:
+            bias += np.random.normal(loc=0, scale=standard_deviation_k, size=bias.shape)
 
 
 def run_genetic_algorithm(population, iterations):
@@ -149,13 +142,13 @@ def run_genetic_algorithm(population, iterations):
 
         new_population = []
         population_fitness_list = [nn.fitness for nn in elite_population]
-        while len(new_population) < pop_size:
+        while len(new_population) < population_size:
             parent1, parent2 = select_parents(elite_population, population_fitness_list)
             child1, child2 = handle_crossover(parent1, parent2)
             handle_mutate(child1)
             handle_mutate(child2)
             new_population.append(child1)
-            if len(new_population) == pop_size:
+            if len(new_population) == population_size:
                 break
             new_population.append(child2)
 
@@ -193,15 +186,15 @@ if __name__ == '__main__':
     target_col_train = len(train_data[0]) - 1
     target_col_test = len(test_data[0]) - 1
 
-    pop_size = int(args['popsize'])
+    population_size = int(args['popsize'])
     elitism = int(args['elitism'])
-    p = float(args['p'])
-    K = float(args['K'])
-    iterations = int(args['iter'])
+    mutation_probability = float(args['p'])
+    standard_deviation_k = float(args['K'])
+    algorithm_iterations = int(args['iter'])
     nn_architecture = args['nn']
 
-    population = generate_start_population(pop_size, nn_architecture)
+    population = generate_start_population(population_size, nn_architecture)
 
-    best_neural_network = run_genetic_algorithm(population, iterations)
+    best_neural_network = run_genetic_algorithm(population, algorithm_iterations)
     best_neural_network.compute_mean_squared_error(test_data)
     print(f'[Test error]: {best_neural_network.mean_squared_error:.6f}')
