@@ -1,0 +1,204 @@
+\documentclass[zavrsnirad]{fer}
+% Dodaj opciju upload za generiranje konačne verzije koja se učitava na FERWeb
+% Add the option upload to generate the final version which is uploaded to FERWeb
+
+
+\usepackage{blindtext}
+
+
+%--- PODACI O RADU / THESIS INFORMATION ----------------------------------------
+
+% Naslov na engleskom jeziku / Title in English
+\title{Mobility management of a Raspberry Pi device in a mobile network}
+
+% Naslov na hrvatskom jeziku / Title in Croatian
+\naslov{Upravljanje pokretljivosti Raspberry Pi uređaja u mobilnoj mreži}
+
+% Broj rada / Thesis number
+\brojrada{1344}
+
+% Autor / Author
+\author{Matija Alojz Stuhne}
+
+% Mentor 
+\mentor{izv. prof. dr. sc.\@ Marin Vuković}
+
+% Datum rada na engleskom jeziku / Date in English
+\date{June, 2024}
+
+% Datum rada na hrvatskom jeziku / Date in Croatian
+\datum{lipanj, 2024.}
+
+%-------------------------------------------------------------------------------
+
+
+\begin{document}
+
+
+% Naslovnica se automatski generira / Titlepage is automatically generated
+\maketitle
+
+
+%--- ZADATAK / THESIS ASSIGNMENT -----------------------------------------------
+
+% Zadatak se ubacuje iz vanjske datoteke / Thesis assignment is included from external file
+% Upiši ime PDF datoteke preuzete s FERWeb-a / Enter the filename of the PDF downloaded from FERWeb
+\zadatak{hr_0036540079_73.pdf}
+
+
+%--- ZAHVALE / ACKNOWLEDGMENT --------------------------------------------------
+
+\begin{zahvale}
+  % Ovdje upišite zahvale / Write in the acknowledgment
+\end{zahvale}
+
+
+% Odovud započinje numeriranje stranica / Page numbering starts from here
+\mainmatter
+
+
+% Sadržaj se automatski generira / Table of contents is automatically generated
+\tableofcontents
+
+
+%--- UVOD / INTRODUCTION -------------------------------------------------------
+\chapter{Uvod}
+\label{pog:uvod}
+
+Neki od radova koje ćemo citirati su \cite{6248073,6247753,ghiglia_pritt_phase_unwrapping,hartley2003multiple,4250461,123DCatch}.
+Trebaju nam samo radi testiranja kako izgleda referenciranje rada s konferencije, rada iz časopisa, knjige i Internetske stranice.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.38\linewidth]{Figures/lenovo_yoga_tab3_pro_front.png} 
+  \caption{Moja prva slika}
+  \label{slk:prvaslika}
+\end{figure}
+
+Referenciramo se na sliku \ref{slk:prvaslika} u sredini rečenice, zatim prije zareza \ref{slk:prvaslika}, te zatim na kraju rečenice \ref{slk:prvaslika}.
+Upravo smo testirali radi li naredba \verb|\ref| ispravno u slučaju kada nakon nje slijedi točka.
+
+Sada slijedi jedna jednadžba:
+\begin{equation}
+  \label{jed:prvajednadzba}
+  \int_{-\infty}^{+\infty}f(t)\,dt=F(\omega)
+\end{equation}
+Jednadžba \eqref{jed:prvajednadzba} je moja prva jednadžba koja defnira par $f(t)\ufrek F(\omega)$ ili $F(\omega)\uvrem f(t)$.
+
+
+%-------------------------------------------------------------------------------
+\chapter{Korišteno sklopovlje}
+\label{pog:koristeno_sklopovlje}
+
+\section{Raspberry Pi 5}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Figures/RaspberryPi5.jpg} 
+  \caption{Raspberry Pi 5 \cite{EbenUpton}}
+  \label{slk:raspberrypi5}
+\end{figure}
+
+\pagebreak
+
+\section{SIM8200EA-M2 5G HAT}
+\label{dio:sim8200ea}
+
+SIM8200EA-M2 5G HAT (Hardware Attached on Top) predstavlja dodatak na postojeći Raspberry Pi uređaj, koji omogućava
+povezivanje Raspberry Pi uređaja na mobilnu mrežu. Mreže kojima je moguće pristupiti putem HAT-a su: 3G/4G/5G. HAT također
+podržava pozicioniranje putem sustava: GPS, GLONASS, Beidou, Galileo, i QZSS.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=1\linewidth]{Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg} 
+  \caption{SIM8200EA-M2 5G HAT \cite{Waveshare}}
+  \label{slk:wavesharesim8200}
+\end{figure}
+
+Popis dijelova SIM8200EA-M2 5G HAT-a prikazanog na Slici \ref{slk:wavesharesim8200}:
+
+\begin{enumerate}
+  \itemsep-0.5em
+  \item Raspberry Pi GPIO zaglavlje
+  \item USB3.1 priključak
+  \item Audio pogonski sklop
+  \item Audio priključak (ulaz)
+  \item Prekidač za resetiranje
+  \item Prekidač za napajanje
+  \item 5V 3A ulaz
+  \item Pretvarač napona (sa 5V na 3.3V)
+  \item Pretvarač napona (sa 5V na 1.8V)
+  \item Pretvarač napona (sa 5V na 4.3V)
+  \item Indikator napajanja
+  \item Indikator mreže
+  \item M.2 priključak
+  \item SIM8200EA-M2 modul (detaljnije u \ref{dio:sim8200eamodul})
+  \item Priključak za antenu
+  \item Priključak za ventilator
+  \item Utor za SIM karticu
+\end{enumerate}
+
+\pagebreak
+
+\section{SIM8200EA-M2 modul}
+\label{dio:sim8200eamodul}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Figures/SIM8262E-M2_5G_HAT07.png} 
+  \caption{Popis antenskih priključaka na modulu te njima dodijeljenih funkcija \cite{WaveshareModule}}
+  \label{slk:sim8200eamodul}
+\end{figure}
+
+%--- ZAKLJUČAK / CONCLUSION ----------------------------------------------------
+\chapter{Zaključak}
+\label{pog:zakljucak}
+
+\blindtext
+
+
+%--- LITERATURA / REFERENCES ---------------------------------------------------
+
+% Literatura se automatski generira iz zadane .bib datoteke / References are automatically generated from the supplied .bib file
+% Upiši ime BibTeX datoteke bez .bib nastavka / Enter the name of the BibTeX file without .bib extension
+\bibliography{literatura}
+
+
+
+%--- SAŽETAK / ABSTRACT --------------------------------------------------------
+
+% Sažetak na hrvatskom
+\begin{sazetak}
+  Unesite sažetak na hrvatskom.
+
+  \blindtext
+\end{sazetak}
+
+\begin{kljucnerijeci}
+  prva ključna riječ; druga ključna riječ; treća ključna riječ
+\end{kljucnerijeci}
+
+
+% Abstract in English
+\begin{abstract}
+  Enter the abstract in English.
+  
+  \blindtext 
+\end{abstract}
+
+\begin{keywords}
+  the first keyword; the second keyword; the third keyword
+\end{keywords}
+
+
+%--- PRIVITCI / APPENDIX -------------------------------------------------------
+
+% Sva poglavlja koja slijede će biti označena slovom i riječi privitak / All following chapters will be denoted with an appendix and a letter
+\backmatter
+
+\chapter{The Code}
+
+\Blindtext
+
+
+\end{document}
