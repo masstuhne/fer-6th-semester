@@ -1,0 +1,21 @@
+serial:
+  port: '/dev/ttyUSB2'
+  baudrate: 115200
+
+at:
+  commands:
+    gps:
+      info: 'AT+CGPSINFO'
+      enable: 'AT+CGPS=1'
+      disable: 'AT+CGPS=0'
+    registration:
+      info:
+        more: 'AT+CREG=2'
+        less: 'AT+CREG=0'
+        status: 'AT+CREG?'
+  timeout:
+    small: 0.01
+    regular: 0.5
+
+file:
+  output: 'info.csv'
