@@ -1,0 +1,10 @@
+serial:
+  port: '/dev/ttyUSB2'
+  baudrate: 115200
+
+at:
+  commands:
+    reset: 'AT+CUSBCFG=usbid,1e0e,9011'
+  timeout:
+    small: 0.01
+    regular: 0.5
