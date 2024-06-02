@@ -13,13 +13,12 @@ def write_to_csv(gps_data, cell_data, gps_call_time, cell_call_time, output_file
 
     data_zip = zip(gps_data, cell_data, gps_call_time, cell_call_time)
     for (lat_lon, lac_ci, gps_time, cell_time) in data_zip:
-        
         lat, lon = lat_lon
         lac, ci = lac_ci
 
         time1 = datetime.strptime(gps_time, '%Y-%m-%d %H:%M:%S.%f')
         time2 = datetime.strptime(cell_time, '%Y-%m-%d %H:%M:%S.%f')
-        
+
         time_difference_microseconds = (time2 - time1).total_seconds() * 1e6
 
         combined_row = [lat, lon, lac, ci, time_difference_microseconds]
@@ -29,7 +28,7 @@ def write_to_csv(gps_data, cell_data, gps_call_time, cell_call_time, output_file
         writer = csv.writer(file)
         writer.writerow(['Latitude', 'Longitude', 'LAC', 'CI', 'Time_error'])
         writer.writerows(combined_data)
-    
+
     print(f'Data successfully written to {output_file}')
 
 
@@ -72,18 +71,19 @@ def parse_creg_response(response_list):
                         data.append(['ERR', 'ERR'])
     return data
 
-def send_at_command(ser, command, expected_response, gps_response, 
+
+def send_at_command(ser, command, expected_response, gps_response,
                     gps_time, cell_response, cell_time):
     ser.write((command + '\r\n').encode())
     print(f'Sent: {command}')
 
     time.sleep(General.REGULAR_TIMEOUT)
-    
+
     response = ''
     if ser.inWaiting():
-            time.sleep(General.SMALL_TIMEOUT)
-            response = ser.read(ser.inWaiting()).decode()
-    if  expected_response not in response:
+        time.sleep(General.SMALL_TIMEOUT)
+        response = ser.read(ser.inWaiting()).decode()
+    if expected_response not in response:
         log_error(command)
         return False
     else:
