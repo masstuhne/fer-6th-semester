@@ -24,43 +24,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{6248073}
-\BIBentryALTinterwordspacing
-A.~Agrawal, S.~Ramalingam, Y.~Taguchi, i V.~Chari, ``A theory of multi-layer
-  flat refractive geometry'', u \emph{2012 IEEE Conference on Computer Vision
-  and Pattern Recognition}, 2012., str. 3346--3353.
-  \url{https://doi.org/10.1109/CVPR.2012.6248073}
-\BIBentrySTDinterwordspacing
-
-\bibitem{6247753}
-\BIBentryALTinterwordspacing
-M.~Gupta i S.~K. Nayar, ``Micro phase shifting'', u \emph{2012 IEEE Conference
-  on Computer Vision and Pattern Recognition}, lipanj 2012., str. 813--820.
-  \url{https://doi.org/10.1109/CVPR.2012.6247753}
-\BIBentrySTDinterwordspacing
-
-\bibitem{ghiglia_pritt_phase_unwrapping}
-D.~C. Ghiglia i M.~D. Pritt, \emph{Two-Dimensional Phase Unwrapping: Theory,
-  Algorithms, and Software}.\hskip 1em plus 0.5em minus 0.4em\relax Wiley,
-  svibanj 1998.
-
-\bibitem{hartley2003multiple}
-R.~Hartley i A.~Zisserman, \emph{Multiple view geometry in computer
-  vision}.\hskip 1em plus 0.5em minus 0.4em\relax Cambridge university press,
-  2003.
-
-\bibitem{4250461}
-\BIBentryALTinterwordspacing
-Y.~Y. Schechner, S.~K. Nayar, i P.~N. Belhumeur, ``Multiplexing for optimal
-  lighting'', \emph{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, sv.~29, br.~8, str. 1339--1354, kolovoz 2007.
-  \url{https://doi.org/10.1109/TPAMI.2007.1151}
-\BIBentrySTDinterwordspacing
-
-\bibitem{123DCatch}
-{123D Catch}, \url{http://www.123dapp.com/catch}, [mre\v zno; stranica posje\'
-  cena: travanj 2017.].
-
 \bibitem{EbenUpton}
 {Eben Upton}, \url{https://www.raspberrypi.com/news/introducing-raspberry-pi-5/
   }, [mre\v zno; stranica posje\' cena: svibanj 2024.].
@@ -72,5 +35,11 @@ Y.~Y. Schechner, S.~K. Nayar, i P.~N. Belhumeur, ``Multiplexing for optimal
 \bibitem{WaveshareModule}
 ------, \url{https://www.waveshare.com/wiki/SIM8200EA-M2_5G_HAT}, [mre\v zno;
   stranica posje\' cena: svibanj 2024.].
+
+\bibitem{JPM-2023-24-01n}
+{Gordan Ježić, Radovan Zentner, Matea Žilak}, ``{JPM-2023-24-01n}'',
+  \url{https://www.fer.unizg.hr/_download/repository/JPM-2023_24-01n.pdf}, {10}
+  {2023}., [Licencirano pod Creative Commons licencom.
+  \url{http://creativecommons.org/licenses/by-nc-sa/2.5/hr/}].
 
 \end{thebibliography}

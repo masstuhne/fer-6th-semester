@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.26)  26 MAY 2024 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.26)  3 JUN 2024 16:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -479,49 +479,239 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count312
 \c@blind@pangramcount=\count313
 \c@blind@pangrammax=\count314
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen177
+\pgfutil@tempdimb=\dimen178
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen179
+\pgf@y=\dimen180
+\pgf@xa=\dimen181
+\pgf@ya=\dimen182
+\pgf@xb=\dimen183
+\pgf@yb=\dimen184
+\pgf@xc=\dimen185
+\pgf@yc=\dimen186
+\pgf@xd=\dimen187
+\pgf@yd=\dimen188
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count315
+\c@pgf@countb=\count316
+\c@pgf@countc=\count317
+\c@pgf@countd=\count318
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count319
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
-LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 35.
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count320
+\pgfsyssoftpath@bigbuffer@items=\count321
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen189
+\pgfmath@count=\count322
+\pgfmath@box=\box55
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count323
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen190
+\pgf@picmaxx=\dimen191
+\pgf@picminy=\dimen192
+\pgf@picmaxy=\dimen193
+\pgf@pathminx=\dimen194
+\pgf@pathmaxx=\dimen195
+\pgf@pathminy=\dimen196
+\pgf@pathmaxy=\dimen197
+\pgf@xx=\dimen198
+\pgf@xy=\dimen199
+\pgf@yx=\dimen256
+\pgf@yy=\dimen257
+\pgf@zx=\dimen258
+\pgf@zy=\dimen259
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen260
+\pgf@path@lasty=\dimen261
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen262
+\pgf@shorten@start@additional=\dimen263
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count324
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen264
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen265
+\pgf@pt@y=\dimen266
+\pgf@pt@temp=\dimen267
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen268
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen269
+\pgf@sys@shading@range@num=\count325
+\pgf@shadingcount=\count326
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box59
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box60
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen270
+\pgf@nodesepend=\dimen271
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count327
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count328
+\tikznumberofchildren=\count329
+\tikznumberofcurrentchild=\count330
+\tikz@fig@count=\count331
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count332
+\pgfmatrixcurrentcolumn=\count333
+\pgf@matrix@numberofcolumns=\count334
+)
+\tikz@expandcount=\count335
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen283
+\pgfarrowlength=\dimen284
+\pgfarrowwidth=\dimen285
+\pgfarrowlinewidth=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/t1stix2.fd
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count315
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count336
+\l__pdf_internal_box=\box65
 ) (./zavrsni_rad.aux)
 \openout1 = `zavrsni_rad.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 35.
-LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls1stix2.fd
 File: ls1stix2.fd 2018/04/02 v2.0.0-latex stix2 LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 35.
-LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 35.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls2stix2.fd
 File: ls2stix2.fd 2018/04/02 v2.0.0-latex stix2 LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-\c@mv@tabular=\count316
-\c@mv@boldtabular=\count317
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+\c@mv@tabular=\count337
+\c@mv@boldtabular=\count338
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -559,17 +749,17 @@ LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen177
-\scratchbox=\box55
-\nofMPsegments=\count319
-\nofMParguments=\count320
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen178
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count339
+\scratchdimen=\dimen287
+\scratchbox=\box66
+\nofMPsegments=\count340
+\nofMParguments=\count341
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count342
+\MPscratchDim=\dimen288
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
+\everyMPtoPDFconversion=\toks42
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -585,7 +775,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -593,218 +783,231 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count324
+\c@section@level=\count345
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
  (./zavrsni_rad.out) (./zavrsni_rad.out)
-\@outlinefile=\write3
-\openout3 = `zavrsni_rad.out'.
+\@outlinefile=\write4
+\openout4 = `zavrsni_rad.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+opensans-TLF on input line 39.
+LaTeX Font Info:    Trying to load font information for T1+opensans-TLF on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/opensans/T1opensans-TLF.fd
 File: T1opensans-TLF.fd 2019/06/24 Font definitions for T1/opensans-TLF.
 )
 LaTeX Font Info:    Font shape `T1/opensans-TLF/m/n' will be
-(Font)              scaled to size 14.0pt on input line 39.
+(Font)              scaled to size 14.0pt on input line 40.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <14> not available
-(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 39.
+(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 14.0pt on input line 39.
+(Font)              scaled to size 14.0pt on input line 40.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <20> not available
-(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 39.
+(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 20.0pt on input line 39.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 39.
-LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 39.
+(Font)              scaled to size 20.0pt on input line 40.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 40.
+LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls1stix2scr.fd
 File: ls1stix2scr.fd 2018/04/02 v2.0.0-latex stix2 script LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 39.
+LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls2stix2ex.fd
 File: ls2stix2ex.fd 2018/04/02 v2.0.0-latex stix2 extentions LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 39.
+LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls1stix2frak.fd
 File: ls1stix2frak.fd 2018/04/02 v2.0.0-latex stix2 fraktur LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 39.
+LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls1stix2bb.fd
 File: ls1stix2bb.fd 2018/04/02 v2.0.0-latex stix2 blackboard LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 39.
+LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls2stix2cal.fd
 File: ls2stix2cal.fd 2018/04/02 v2.0.0-latex stix2 calligraphic LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 39.
+LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls1stix2sf.fd
 File: ls1stix2sf.fd 2018/04/02 v2.0.0-latex stix2 sans-serif LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 39.
+LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ls2stix2tt.fd
 File: ls2stix2tt.fd 2018/04/02 v2.0.0-latex stix2 typewriter LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<hr_0036540079_73.pdf, id=49, 598.235pt x 845.1575pt>
+<hr_0036540079_73.pdf, id=92, 598.235pt x 845.1575pt>
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf>
-Package pdftex.def Info: hr_0036540079_73.pdf  used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf  used on input line 47.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf>
-Package pdftex.def Info: hr_0036540079_73.pdf  used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf  used on input line 47.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
-<hr_0036540079_73.pdf, id=52, page=1, 598.235pt x 845.1575pt>
+<hr_0036540079_73.pdf, id=95, page=1, 598.235pt x 845.1575pt>
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf, page 1>
-Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 47.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf, page 1>
-Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 47.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf, page 1>
-Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 47.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf, page 1>
-Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 47.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036540079_73.pdf Graphic file (type pdf)
 <use hr_0036540079_73.pdf, page 1>
-Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 46.
+Package pdftex.def Info: hr_0036540079_73.pdf , page1 used on input line 47.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
  [2 <./hr_0036540079_73.pdf>]
 LaTeX Font Info:    Font shape `T1/stix2/m/sl' in size <12> not available
-(Font)              Font shape `T1/stix2/m/it' tried instead on input line 51.
+(Font)              Font shape `T1/stix2/m/it' tried instead on input line 52.
  [3
 
 ]
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <18> not available
-(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 61.
+(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 18.0pt on input line 61.
+(Font)              scaled to size 18.0pt on input line 62.
  (./zavrsni_rad.toc)
-\tf@toc=\write4
-\openout4 = `zavrsni_rad.toc'.
+\tf@toc=\write5
+\openout5 = `zavrsni_rad.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \chapter
+l.66 \chapter
              {Uvod} [1
 
 
 ]
 Poglavlje 1..
-<Figures/lenovo_yoga_tab3_pro_front.png, id=98, 562.1pt x 346.29375pt>
-File: Figures/lenovo_yoga_tab3_pro_front.png Graphic file (type png)
-<use Figures/lenovo_yoga_tab3_pro_front.png>
-Package pdftex.def Info: Figures/lenovo_yoga_tab3_pro_front.png  used on input line 73.
-(pdftex.def)             Requested size: 167.58888pt x 103.24426pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 79.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <16> not available
+(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 69.
+LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
+(Font)              scaled to size 16.0pt on input line 69.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 \chapter
-             {Korišteno sklopovlje} [2
+l.112 \chapter
+              {Korišteno sklopovlje} [2
 
- <./Figures/lenovo_yoga_tab3_pro_front.png>]
+]
 Poglavlje 2..
-LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <16> not available
-(Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input line 93.
-LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 16.0pt on input line 93.
-<Figures/RaspberryPi5.jpg, id=121, 1027.84pt x 685.56125pt>
+<Figures/RaspberryPi5.jpg, id=149, 1027.84pt x 685.56125pt>
 File: Figures/RaspberryPi5.jpg Graphic file (type jpg)
 <use Figures/RaspberryPi5.jpg>
-Package pdftex.def Info: Figures/RaspberryPi5.jpg  used on input line 97.
+Package pdftex.def Info: Figures/RaspberryPi5.jpg  used on input line 128.
 (pdftex.def)             Requested size: 352.81552pt x 235.32635pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 
+l.134 
        [3
 
  <./Figures/RaspberryPi5.jpg>]
-<Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg, id=129, 963.6pt x 495.8525pt>
+<Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg, id=157, 963.6pt x 495.8525pt>
 File: Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg Graphic file (type jpg)
 <use Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg>
-Package pdftex.def Info: Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg  used on input line 113.
+Package pdftex.def Info: Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg  used on input line 144.
 (pdftex.def)             Requested size: 441.01773pt x 226.9373pt.
- [4 <./Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg>] [5]
-<Figures/SIM8262E-M2_5G_HAT07.png, id=163, 417.05812pt x 328.97906pt>
-File: Figures/SIM8262E-M2_5G_HAT07.png Graphic file (type png)
-<use Figures/SIM8262E-M2_5G_HAT07.png>
-Package pdftex.def Info: Figures/SIM8262E-M2_5G_HAT07.png  used on input line 148.
-(pdftex.def)             Requested size: 352.81552pt x 278.31833pt.
- [6 <./Figures/SIM8262E-M2_5G_HAT07.png>]
+ [4 <./Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg>]
+Overfull \hbox (0.83292pt too wide) in paragraph at lines 175--177
+\T1/stix2/m/n/12 SIM8200EA-M2 mo-dul klju�na je kom-po-nenta SIM8200EA-M2 5G mo-dema ([]2.2.[]). Omo-
+ []
+
+[5]
 Poglavlje 3..
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 215.
+(/usr/share/texlive/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
+File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
+) [6
+
+]
+Overfull \hbox (3.19434pt too wide) in paragraph at lines 278--279
+ [][] 
+ []
+
+[7] [8]
+Poglavlje 4..
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 158.
+(blindtext)                 on input line 312.
 
-(./zavrsni_rad.bbl [7
+(./zavrsni_rad.bbl [9
 
-]) [8
+]
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+[]\T1/stix2/m/n/12 Eben Up-ton, []$https : / / www . raspberrypi . com / news / introducing -[] raspberry -[] pi -[] 5/$[],
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 40--44
+\T1/stix2/m/n/12 fer . unizg . hr / _download / repository / JPM -[] 2023 _ 24 -[] 01n . pdf$[], 10 2023., [Li-cen-ci-rano
+ []
+
+) [10
 
 ]
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 175.
+(blindtext)                 on input line 329.
 
-[9
+[11
 
-] [10
+] [12
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.199 \chapter{The Code}
+l.353 \chapter{The Code}
                         
 Privitak A.
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
-[11
+[13
 
 
 ]
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 356.
 
-[12] (./zavrsni_rad.aux)
+[14] (./zavrsni_rad.aux)
 
  *File List*
      fer.cls    2021/06/10 FER3
@@ -880,6 +1083,25 @@ rerunfilecheck.sty    2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 uniquecounter.sty    2019/12/15 v1.4 Provide unlimited unique counter (HO)
 blindtext.sty    2012/01/06 V2.0 blindtext-Package
   xspace.sty    2014/10/28 v1.13 Space after command names (DPC,MH)
+    tikz.sty    2021/05/15 v3.1.9a (3.1.9a)
+     pgf.sty    2021/05/15 v3.1.9a (3.1.9a)
+  pgfrcs.sty    2021/05/15 v3.1.9a (3.1.9a)
+pgfrcs.code.tex
+ pgfcore.sty    2021/05/15 v3.1.9a (3.1.9a)
+  pgfsys.sty    2021/05/15 v3.1.9a (3.1.9a)
+pgfsys.code.tex
+pgfsyssoftpath.code.tex    2021/05/15 v3.1.9a (3.1.9a)
+pgfsysprotocol.code.tex    2021/05/15 v3.1.9a (3.1.9a)
+pgfcore.code.tex
+pgfcomp-version-0-65.sty    2021/05/15 v3.1.9a (3.1.9a)
+pgfcomp-version-1-18.sty    2021/05/15 v3.1.9a (3.1.9a)
+  pgffor.sty    2021/05/15 v3.1.9a (3.1.9a)
+ pgfkeys.sty    
+pgfkeys.code.tex
+ pgfmath.sty    
+pgfmath.code.tex
+pgffor.code.tex
+tikz.code.tex
  t1stix2.fd    2018/04/02 v2.0.0-latex stix2 T1 font definitions
 l3backend-pdftex.def    2022-01-12 L3 backend support: PDF output (pdfTeX)
 ls1stix2.fd    2018/04/02 v2.0.0-latex stix2 LS1 font definitions
@@ -908,30 +1130,28 @@ hr_0036540079_73.pdf    Graphic file (type pdf)
 hr_0036540079_73.pdf    Graphic file (type pdf)
 hr_0036540079_73.pdf    Graphic file (type pdf)
 hr_0036540079_73.pdf    Graphic file (type pdf)
-Figures/lenovo_yoga_tab3_pro_front.png
-  t1cmtt.fd    2019/12/16 v2.5j Standard LaTeX font definitions
 Figures/RaspberryPi5.jpg
 Figures/SIM8200EA-M2-5G-HAT-details-intro.jpg
-Figures/SIM8262E-M2_5G_HAT07.png
+ts1stix2.fd    2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 zavrsni_rad.bbl
  ***********
 
 Package rerunfilecheck Info: File `zavrsni_rad.out' has not changed.
-(rerunfilecheck)             Checksum: 25F1BAA41850A2152BD7F14B950EF182;1082.
+(rerunfilecheck)             Checksum: 520B3A1268DDFEB5ED5171B10438C4F8;2610.
  ) 
 Here is how much of TeX's memory you used:
- 17804 strings out of 478287
- 277046 string characters out of 5849289
- 560318 words of memory out of 5000000
- 35649 multiletter control sequences out of 15000+600000
- 549412 words of font info for 130 fonts, out of 8000000 for 9000
+ 28766 strings out of 478287
+ 521085 string characters out of 5849289
+ 780056 words of memory out of 5000000
+ 46385 multiletter control sequences out of 15000+600000
+ 549440 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,17n,131p,557b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathcal.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}</usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on zavrsni_rad.pdf (15 pages, 1151229 bytes).
+ 85i,17n,131p,557b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}</usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb>
+Output written on zavrsni_rad.pdf (17 pages, 656496 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
