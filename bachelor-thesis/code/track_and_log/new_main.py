@@ -15,14 +15,10 @@ access_technology_dict = {
     0: "GSM",
     1: "GSM Compact",
     2: "UTRAN",
-    3: "EDGE",
-    4: "HSDPA",
-    5: "HSUPA",
-    6: "HSDPA_HSUPA",
+    6: "UTRAN_HSDPA_HSUPA",
     7: "EUTRAN",
     8: "EC_GSM_IOT",
     9: "EUTRAN_NB_S1",
-    10: "UTRAN_HSDPA",
     11: "NR_5GCN",
     12: "NGRAN",
     13: "EUTRA_NR"
@@ -89,7 +85,7 @@ class GPSLogger:
 
     def get_gps_info(self):
         logger.info("Getting GPS information...")
-        response = self.send_at_command('AT+CGPSINFO?')
+        response = self.send_at_command('AT+CGPSINFO')
         if response:
             combined_response = ''.join(response)
             match = re.search(r'\+CGPSINFO: (.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)', combined_response)
@@ -119,10 +115,10 @@ class GPSLogger:
         response = self.send_at_command('AT+CREG?')
         if response:
             combined_response = ''.join(response)
-            match = re.search(r'\+CREG: \d,(\d+),"(.*?)","(.*?)"', combined_response)
+            match = re.search(r'\+CREG: \d,(\d+),(\d+),(\d+)', combined_response)
             if match:
-                lac = match.group(2)
-                ci = match.group(3)
+                lac = int(match.group(2), 16)
+                ci = int(match.group(3), 16)
                 logger.info(f"LAC: {lac}, CI: {ci}")
                 return lac, ci
             else:
@@ -131,6 +127,10 @@ class GPSLogger:
         else:
             logger.error("Failed to get LAC and CI.")
             return None, None
+
+    def set_creg(self):
+        logger.info("Setting CREG to 2...")
+        self.send_at_command('AT+CREG=2')
 
     def log_signal_quality(self):
         logger.info("Checking signal quality...")
@@ -170,7 +170,7 @@ class GPSLogger:
 
     def write_to_csv(self, data):
         file_exists = os.path.isfile(self.csv_filename)
-        with open(self.csv_filename, 'a', newline='') as csvfile:
+        with open(self.csv_filename, 'w', newline='') as csvfile:
             fieldnames = [
                 'latitude', 'latitude_direction', 'longitude', 'longitude_direction', 'date', 'utc_time',
                 'altitude', 'speed', 'course', 'lac', 'ci', 'mnc', 'mcc', 'rssi', 'ber', 'technology'
@@ -193,9 +193,10 @@ def main():
     log_additional_info = True  # Set to True to log additional info like current technology or signal quality
     check_interval = 1  # Time in seconds between checks
 
-    gps_logger = GPSLogger(port, baudrate, timeout,log_additional_info=log_additional_info)
+    gps_logger = GPSLogger(port, baudrate, timeout, log_additional_info=log_additional_info)
     try:
         gps_logger.connect()
+        gps_logger.set_creg()
         gps_logger.get_mnc_mcc()
         gps_logger.start_gps_session()
         while True:
