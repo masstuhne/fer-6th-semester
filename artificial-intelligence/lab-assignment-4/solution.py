@@ -141,9 +141,10 @@ def run_genetic_algorithm(population, iterations):
                 break
 
         new_population = []
-        population_fitness_list = [nn.fitness for nn in elite_population]
+        new_population.extend(elite_population)
+        population_fitness_list = [nn.fitness for nn in sorted_population]
         while len(new_population) < population_size:
-            parent1, parent2 = select_parents(elite_population, population_fitness_list)
+            parent1, parent2 = select_parents(sorted_population, population_fitness_list)
             child1, child2 = handle_crossover(parent1, parent2)
             handle_mutate(child1)
             handle_mutate(child2)
